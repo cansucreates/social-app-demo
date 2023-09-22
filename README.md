@@ -22,18 +22,19 @@ If you don't already have a [Vercel account](https://vercel.com/signup), create 
 1. Select **Next.js** as the framework.
 1. Under **Environment Variables**, add all of your environment variables from your [`.env.local`](./.env.local) file.
 1. Click **Deploy**.
-    - This initail deploy will not really do anything since the `main` branch does not contain our final code.
+   - This initail deploy will not really do anything since the `main` branch does not contain our final code.
 1. Go back to the main dashboard and select your new project.
-    - Take note of your custom domain. (Example: `https://socialbutterfly.vercel.app`)
+   - Take note of your custom domain. (Example: `https://socialbutterfly.vercel.app`)
 1. From the **Settings** tab, click **Git**.
 1. Change the **Production Branch** to `10-lesson` and save.
 1. Navigate to the **Environment Variables** tab.
-1. Change `AUTH0_BASE_URL` to your custom Vercel domain noted earlier. 
+1. Change `AUTH0_BASE_URL` to your custom Vercel domain noted earlier.
 1. To redeploy, you'll need to make a new commit to the `10-lesson` branch. You can simply open the `README.md` file, add a space somewhere, and make a new commit.
 
 ## Task 3: Update Auth0 settings
 
 1. In your Auth0 application, update the following fields under **Settings**:
+
 - Allowed Callback URLs: `http://localhost:3000/api/auth/callback, https://*.vercel.app/api/auth/callback`
 - Allowed Logout URLS: `http://localhost:3000, https://*.vercel.app, http://*.vercel.app`
 - Allowed Web Origins: `https://*.vercel.app`
